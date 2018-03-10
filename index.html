@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的博客</title>
+<style type="text/css">
+	body,div,ol,li,p,form,ul,h3,center
+	{
+		padding:0;
+		margin:0;
+		word-wrap:break-word;
+	}
+	body
+	{
+		font-size:14px;
+		line-height:1.42857143;
+		color:#333;
+		background-color:#f5f5f5;
+	}
+	h3
+	{
+    	font-size:24px;
+		font-weight:500;
+		line-height:1.1;
+	}
+	#topbanner
+	{
+		background-image:url(imgs/banner.jpg);
+		width:1518px;
+		height:216px;
+		margin:0 auto;
+	}
+	#topnavbar
+	{
+		width:1518px;
+		height:50px;
+		margin:0 auto;
+		background-color:#0b445b;
+	}
+	#navbar
+	{
+		width:1024px;
+		height:50px; 
+		list-style-type:none;
+	}
+	#navbar li
+	{
+		float:left;
+		width:128px;
+		height:50px;
+		text-align:center;
+		line-height:50px;
+	}
+	#navbar li a
+	{
+		float:left;
+		width:128px;
+		height:50px;
+		color:#FFF;
+		text-decoration:none;
+	}
+	#navbar li a:hover
+	{
+		text-decoration:underline;
+		background-color:#366B6B;
+		color:#F00;
+	}
+	#middle
+	{
+		width:1170px;
+		height:2264px;
+		/*background-color:#FF0;*/
+		margin:0 auto;
+	}
+	#middle-left
+	{
+		float:left;
+		width:750px;
+		/*background-color:#3F0;*/
+	}
+	#middle-right
+	{
+		float:right;
+		width:390px;
+		/*background-color:#F0C;*/
+	}
+	#middle-notice-left
+	{
+		float:left;
+		width:80px;
+		height:40px;
+		background-color:#16a085;
+		color:#FFF;
+		line-height:40px;
+		margin-top:20px;
+		text-align:center;
+	}
+	#middle-notice-right
+	{
+		float:left;
+		width:670px;
+		height:40px;
+		line-height:40px;
+		margin-top:20px;
+		background-color:#E1E1E1;
+		white-space:pre-wrap;
+	}
+	#middle-text
+	{
+		float:left;
+		width:710px;
+		height:302px;
+		background-color:#FFF;
+		margin-top:15px;
+		padding:30px 20px 20px 20px;
+	}
+	#middle-text a
+	{
+		color:#000;
+		text-decoration:none;
+	}
+	#middle-text a:hover
+	{
+		text-decoration:underline;
+		color:#16a085;
+	}
+	#middle-text-middle
+	{
+		float:left;
+		margin-top:14px;
+		font-size:14px;
+		color:#c1c1c1;
+		line-height:28px;
+		border-top:1px solid #c1c1c1;
+		border-bottom:1px solid #c1c1c1;
+	}
+	#middle-text-img1
+	{
+		float:left;
+		width:300px;
+		height:180px;
+		margin-top:20px;
+		margin-bottom:20px;
+		background-image:url(imgs/1.jpg);
+	}
+	#middle-text-img2
+	{
+		float:left;
+		width:300px;
+		height:180px;
+		margin-top:20px;
+		margin-bottom:20px;
+		background-image:url(imgs/2.jpg);
+	}
+	#middle-text-img3
+	{
+		float:left;
+		width:300px;
+		height:180px;
+		margin-top:20px;
+		margin-bottom:20px;
+		background-image:url(imgs/3.jpg);
+	}
+	#middle-text-img4
+	{
+		float:left;
+		width:300px;
+		height:180px;
+		margin-top:20px;
+		margin-bottom:20px;
+		background-image:url(imgs/4.jpg);
+	}
+	#middle-text-img5
+	{
+		float:left;
+		width:300px;
+		height:180px;
+		margin-top:20px;
+		margin-bottom:20px;
+		background-image:url(imgs/5.jpg);
+	}
+	#middle-text-img6
+	{
+		float:left;
+		width:300px;
+		height:180px;
+		margin-top:20px;
+		margin-bottom:20px;
+		background-image:url(imgs/6.jpg);
+	}
+	#middle-text-text
+	{
+		margin-top:24px;
+		float:left;
+		width:398px;
+		height:168px;
+		padding:0 6px 0 6px;
+	}
+	#middle-text-bottom
+	{
+		float:right;
+		text-align:right;
+		font-size:14px;
+		color:#c1c1c1;
+		line-height:28px;
+		white-space:pre-wrap;
+		margin-top:10px;
+	}
+	#search
+	{
+		float:left;
+		width:360px;
+		height:46px;
+		margin-top:20px;
+		padding:15px;
+		background-color:#FFF;
+		line-height:46px;
+		text-align:center;
+	}
+	#search input[type="text"]
+	{
+		width:208px;
+		height:36px;
+		border:1px solid #c1c1c1;
+	}
+	#search input[type="submit"]
+	{
+		width:106px;
+		height:38px;
+		background-color:#16a085;
+		color:#FFF;
+	}
+	#sort,#links
+	{
+		float:right;
+		width:390px;
+		margin-top:20px;
+		background-color:#FFF;
+	}
+	#sort-title,#links-title
+	{
+		width:390px;
+		background-color:#16a085;
+		color:#FFF;
+		height:40px;
+	}
+	#sort-title span,#links-title span
+	{
+		float:left;
+		line-height:40px;
+		margin-left:20px;
+	}
+	#sort-ul,#links-ul
+	{
+		float:left;
+		list-style-type:none;
+		list-style-position:inside;
+		height:300px;
+	}
+	#sort-ul li,#links li
+	{
+		width:390px;
+		height:49px;
+		line-height:49px;
+		border-bottom:1px solid #c1c1c1;
+		
+	}
+	#sort-ul li a,#links-ul li a
+	{
+		float:left;
+		width:380px;
+		height:49px;
+		text-decoration:none;
+		color:#000;
+		font-size:14px;
+		padding-left:10px;
+	}
+	#sort-ul li a:hover,#links-ul li a:hover
+	{
+		text-decoration:underline;
+		background-color:#0b445b;
+		color:#FFF;
+	}
+	#bottom-button
+	{
+		/*background-color:#F00;*/
+		width:1518px;
+		width:38px;
+		padding-top:10px;
+		margin:0 auto;
+	}
+	#bottom-button-text
+	{
+		float:left;
+		width:38px;
+		height:38px;
+		background-color:#16a085;
+		color:#FFF;
+		line-height:38px;
+	}
+	#bottom
+	{
+		width:1518px;
+		height:140px;
+		margin:0 auto;
+		margin-top:80px;
+		background-color:#0b445b;
+	}
+	#bottom-text
+	{
+		float:left;
+		width:1518px;
+		height:140px;
+		margin-top:40px;
+		color:#FFF;
+		text-align:center;
+	}
+</style>
+</head>
+<body>
+	<div id="topbanner"></div>
+    <div id="topnavbar">
+        <center><ol id="navbar">
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">生活随感</a></li>
+            <li><a href="#">成长分享</a></li>
+            <li><a href="#">诗词歌赋</a></li>
+            <li><a href="#">小说幻想</a></li>
+            <li><a href="#">给我投稿</a></li>
+            <li><a href="#">给我留言</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ol></center>
+    </div>
+    <div id="middle">
+    	<div id="middle-left">
+            <div id="middle-notice-left">公告</div>
+            <div id="middle-notice-right">    这是我的博客，欢迎您阅读！   2016年12月26日</div>
+            <div id="middle-text">
+                <h3><a href="text.html">11天后微信小程序正式推出 而腾讯已经赚了数亿元原创</a></h3>
+                <div id="middle-text-middle">
+                    <div id="middle-text-img1"></div>
+                    <div id="middle-text-text">需要指出的是，目前每个小程序认证费是300元，一个号配齐全部功能一年费用高达近千元。而腾讯方面数据显示，目前公众号数量超1000万。换言之，即便只有10%的公众号申请了小程序，仍会每年给腾讯带来至少10亿元的收入。
+                    </div>
+                </div>
+                <div id="middle-text-bottom">12月29日   君无殤    阅读：1542   评论：201</div>
+            </div>
+            <div id="middle-text">
+                <h3><a href="#">腾讯高级PM详解，微信小程序的场景化应用具体有哪些？</a></h3>
+                <div id="middle-text-middle">
+                    <div id="middle-text-img2"></div>
+                    <div id="middle-text-text">在微信公开课2017Pro中，张小龙反复强调了，小程序，最大的入口，就是在各类线下的商业场景中，这是对“让商业存在于无形之中”的理念的诠释。据钛媒体了解，目前小程序也已经官方邀请和接入了包括肯德基在内的第一批200家商户，功能则主要覆盖的是会员服务和提前预定(预约)服务等。
+                    </div>
+                </div>
+                <div id="middle-text-bottom">12月28日   君无殤    阅读：1642   评论：351</div>
+            </div>
+            <div id="middle-text">
+                <h3><a href="#">一份名单轰动了整个互联网，贵圈真乱！！</a></h3>
+                <div id="middle-text-middle">
+                    <div id="middle-text-img3"></div>
+                    <div id="middle-text-text">12月23日，圣诞节前夜，北京扫黄，但整个中国的互联网界、金融界、甚至媒体圈都震惊了。综合来源：互联网金融俱乐部 综合自：奔跑吧，琪哥、北京青年报、国务院国资委新闻中心@国资小新、互联网的一些事、新京报、产品疯人院、氢媒工场（ID：save....
+                    </div>
+                </div>
+                <div id="middle-text-bottom">12月27日   君无殤    阅读：2042   评论：231</div>
+            </div>
+            <div id="middle-text">
+                <h3><a href="#">做自己——文青女咖菲猫投稿推荐</a></h3>
+                <div id="middle-text-middle">
+                    <div id="middle-text-img4"></div>
+                    <div id="middle-text-text">九月一号，拖着沉重的行李，第一次踏进这片校园。三天的新生报道，接着是一星期的新生教育。而在这些天里，仿佛自己像个无处安放的灵魂，在到处飘荡着，我努力让自己去适应这里的一切，却发现自己又在无形之中排斥着一切。我拒绝和任何人谈心，也拒绝和除宿舍人以外的人交流。慢慢，我发现自己茫然失措了，每天更多的时间是在想：大学对我来说，意义在哪？
+                    </div>
+                </div>
+                <div id="middle-text-bottom">12月26日   君无殤    阅读：5322   评论：581</div>
+            </div>
+            <div id="middle-text">
+                <h3><a href="#">Wolf：黑客的代价</a></h3>
+                <div id="middle-text-middle">
+                    <div id="middle-text-img5"></div>
+                    <div id="middle-text-text">曾经的我为了个虚无飘渺的梦花了数年的时间有人说，一旦坚持就可以做到自己想要的我做到了可我却发现我失去的比得到的更多就像这首词一样叫黑客的代价 
+                    </div>
+                </div>
+                <div id="middle-text-bottom">12月25日   君无殤    阅读：5687   评论：151</div>
+            </div>
+            <div id="middle-text">
+                <h3><a href="#">咖菲猫：无言·寄情虚拟，梦幻之后</a></h3>
+                <div id="middle-text-middle">
+                    <div id="middle-text-img6"></div>
+                    <div id="middle-text-text">这个清晨，周围环境格外的寂静。推开窗，一股冷气迎面扑来，低头向下望，发现下雪了。合上窗，默默的回到床上躺下，拿出手机，将昨晚未看完的链接接着看完。我承认，对面对如此美好的早晨不去学习，却躺床上看链接的我，内心有着鄙视。可鄙视归鄙视，那时的我早已沉溺与链接中，忘却要学习的事实。
+                    </div>
+                </div>
+                <div id="middle-text-bottom">12月24日   君无殤    阅读：6962   评论：1226</div>
+            </div>
+    	</div>
+        <div id="middle-right">
+        	<div id="search">
+            	<form name="search" id="maintop-left-form">
+                    <input type="text" name="key" value="请输入关键词" />
+                    <input type="submit" value="查找" />
+            	</form>
+            </div>
+            <div id="sort">
+            	<div id="sort-title">
+                	<span>分类</span> 
+                    <ul id="sort-ul">
+                        <li><a href="#">生活随感</a></li>
+                        <li><a href="#">成长分享</a></li>
+                        <li><a href="#">诗词歌赋</a></li>
+                        <li><a href="#">小说幻想</a></li>
+                        <li><a href="#">华夏古风</a></li>
+                        <li><a href="#">时事热点</a></li>
+            		</ul>          	
+            	</div>
+            </div>
+            <div id="links">
+            	<div id="links-title">
+                	<span>友情链接</span> 
+                    <ul id="links-ul">
+                        <li><a href="#">百度</a></li>
+                        <li><a href="#">淘宝</a></li>
+                        <li><a href="#">腾讯</a></li>
+                        <li><a href="#">网易</a></li>
+                        <li><a href="#">优酷</a></li>
+                        <li><a href="#">酷狗</a></li>
+            		</ul>          	
+            	</div>
+            </div>
+        </div>
+	</div>
+    <div id="bottom-button">
+        <center>
+        	<div id="bottom-button-text">1</div>
+       	</center>
+    </div>
+    <div id="bottom">
+    	<div id="bottom-text">
+            <p>© 2016 Creative blog. All rights reserved | Design by Alex Dong</p>
+            <p>渝ICP备18003965号-3</p>
+            <p>19.60mssitemap</p>
+    	</div>
+    </div>
+</body>
+</html>
